@@ -15,5 +15,5 @@ urlpatterns = [
     path('logout/',views.logoutuser , name='logout') ,
     path('profile/',views.profileuser , name='profile') ,
     path('history/',views.viewHistory , name='profileHistory') ,
-    path('Vat/',views.Vat , name='Vat') ,
+    path('vat/',views.vat , name='vat') ,
 ]

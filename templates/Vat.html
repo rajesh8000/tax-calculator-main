@@ -1,13 +1,9 @@
 {% extends 'base.html' %}
 {% load static %}
 
-
 {% block content %}
 
 <body>
-
-   
-    
 
     {% if user.is_authenticated %}
 
@@ -22,7 +18,7 @@
                 <!--class section-top contains with tax calculator system-->
                 <div class="section-top">
                     <div class="tax-calculator" id="calculation">
-                        <h3>VAT Calculator:</h3>
+                        <h3>Annual Income</h3>
                         <form class="income" method='POST'>
                             {% csrf_token %}
                             <!--class income-info contains with income informations-->
@@ -30,89 +26,72 @@
                                 <div class="income-info">
                                     <div class="income-top">
                                         <div class="income-salary">
-                                            <label for="salary">Amount:</label>
-                                            <input type="number" name="salary" min="1000" placeholder="10000" required>
+                                            <label for="salary">Value:</label>
+                                            <input type="number" name="price" min="1000" placeholder="10000" required>
                                         </div>
-                                      
+                                        <div class="income-allowance">
+                                            <label for="allowance">Tax:</label>
+                                            <input type="number" name="vatax" required>
+                                        </div>
                                     </div>
-                                   
-                            
-                               
+                                </div>
+                            </div>
                             <!--class button i.e calculator buttons-->
                             <div class="calculation-button">
                                 <input type="submit" id="btn-reset" Value="Reset Value" name="reset">
-                              
-                               
-
-                                <Input type="submit" id="btn-calculate" value="Calculate" name="calculate">
-
-
+                                <input type="submit" id="btn-calculate" value="Calculate" name="calculate">
                             </div>
                             
-                            </form>
-                            </div>
+                        </form>
                         </div>
-                </section>
-                <!---section tag ends-->
-                <!--result section-->
-                <section>
-                    <div class="result">
-                        <h1>Result</h1>
-                        <div class="results-info">
-                            <div class="particular"><!---this-->
-                                <label>Particulars</label>
-                                <label>Amount(Rs.)</label>
-                            </div>
-                           
-                            <div class="total-tax">
-                                <label>Total Tax:</label>
-                                <label>{{total_tax}}</label>
-                                <!--Printing total tax amount-->
-    
-                          
-                            </div>
-    
-                            
-    
                     </div>
-                </section>
-            </div>
+            </section>
+            <!---section tag ends-->
+            <!--result section-->
+            <section>
+                <div class="result">
+                    <h1>Result</h1>
+                    <div class="results-info">
+                        <div class="particular"><!---this-->
+                            <label>Particulars</label>
+                            <label>Amount(Rs.)</label>
+                        </div>
+                        <div class="total-income">
+                            <label>Total Price:</label>
+                            <label>{{income_amount}}</label><!---this-->
+                            <!--Printing total income-->
+
+                        </div>
+
+                        <div class="total-tax">
+                            <label>Total Tax:</label>
+                            <label>{{tax_amount}}</label>
+                            <!--Printing total tax amount-->
+
+                        </div>
+
+                        <div class="total-deduction">
+                            <label>Price after Vat:</label>
+                            <label>{{deduction_amount}}</label>
+                            <!--Printing total deduction amount-->
+
+                        </div>
+                       
+
+                    </div>
+
+                </div>
+            </section>
         </div>
-        <!---inner line js-->
-        
+    </div>
+    <!---inner line js-->
+
+    {%endif%}
+
+    {% if not user.is_authenticated %}
     
-        {%endif%}
+    <h1 align="center">User Not Logged in Please Login</h1>
     
-        {% if not user.is_authenticated %}
-        
-        <h1 align="center">User Not Logged in Please Login</h1>
-        
-        {%endif%}
-    
-      
-    </body>
-    {% endblock content %}
-                                    
-                                
-                                
-                                
-
-                                
-                                
-                           
-                           
-
-                           
-                           
-                      
-                           
-
-                           
-                            
-                            
-
-
-                              
-                              
-                             
-                          
+    {%endif%}
+</body>
+{% endblock content %}

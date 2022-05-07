@@ -167,20 +167,36 @@ def viewHistory(request):
    return render(request,"history.html")
 
 
-def Vat(request):
-
+def vat(request):
     total_tax=0
-
+    total_price=0
+    totall=0
+    
     if request.method == 'POST' and 'calculate' in request.POST:
-        sal = request.POST['salary']
-        try:
-            salary=int(float(sal))
-            print("salary", salary)
-            total_tax=(13.0/100.0)*salary
-            print("total_tax", total_tax)
+        sal = request.POST['price']
+        tax = request.POST['vatax']
+
+
+        try: #using try block for exception handling
+            sala = int(float(sal))
+            totaltax = int(float(tax))/100
+            totall= sala
+            print("salary",totall)
+
+            total_tax=sala * totaltax
+            print("totaltax",total_tax)
+
+            total_price=sala+total_tax
+            print("price",total_price)
+
+
+
+
+            
 
 
         except:
-            print("error")
-        
-    return render(request, 'Vat.html', {'total_tax':total_tax})
+            print('Cannot convert string to int')
+            
+    return render(request, 'vat.html',{'tax_amount':total_tax,'deduction_amount':total_price,'income_amount':totall})
+
