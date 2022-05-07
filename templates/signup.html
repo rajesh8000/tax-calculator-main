@@ -1,0 +1,152 @@
+{% extends 'base.html' %} {% load static %} {% block content %}
+<style>
+  .mb-3 {
+    border: 5px;
+    text-align: center;
+    margin-top: 25px;
+  }
+</style>
+
+<form action="/signup/" method="POST">
+    {% csrf_token %}
+    <div class="mb-3">
+      <label for="exampleInputEmail1" class="form-label"
+        >First Name
+      </label><br>
+      <input
+        name="first_name"
+        type="text"
+        class="form-control"
+        id="InputRegisterFirstname"
+        aria-describedby="emailHelp"
+        required
+      />
+    </div>
+    <div class="mb-3">
+        <label for="exampleInputEmail1" class="form-label"
+          >Last Name
+        </label><br>
+        <input
+          name="last_name"
+          type="text"
+          class="form-control"
+          id="InputRegisterFirstname"
+          aria-describedby="emailHelp"
+          required
+        />
+      </div>
+    <div class="mb-3">
+      <label
+        for="exampleInputEmail1"
+        class="form-label"
+        aria-label="Email"
+      >
+        Email address</label
+      ><br>
+      <input
+        name="email"
+        type="email"
+        class="form-control"
+        id="exampleInputRegisterEmail"
+        aria-describedby="emailHelp"
+        required
+        placeholder="xxxx@gmail.com"
+      />
+    </div>
+
+    <div class="mb-3">
+        <label for="inputRegisterPassword" class="form-label"
+          >Username
+        </label><br>
+        <input
+          name="username"
+          type="text"
+          id="inputRegisterPassword1"
+          class="form-control"
+          required
+        />
+      </div>
+
+    <div class="mb-3">
+      <label for="inputRegisterPassword" class="form-label"
+        >Password
+      </label><br>
+      <input
+        name="password1"
+        type="password"
+        pattern=".{8,100}"
+        id="inputRegisterPassword1"
+        class="form-control"
+        required
+        aria-describedby="passwordHelpBlock"
+      />
+    </div>
+
+    <div class="mb-3">
+        <label for="inputRegisterPassword" class="form-label"
+        >Confirm Password
+      </label><br>
+      <input
+        name="password2"
+        type="password"
+        pattern=".{8,100}"
+        id="inputRegisterPassword2"
+        class="form-control"
+        aria-describedby="passwordHelpBlock"
+        
+      />
+    </div>
+    
+    <div class="mb-3">
+    <button
+      type="submit"
+      class="registerbtn"
+    >
+    Register
+    </button>
+    </div>
+
+    <div class="mb-3">
+      {% for message in messages %}
+      <!-- <div
+        class="alert alert-success d-flex align-items-center alert-dismissible fade show"
+        role="alert"
+      >
+        <svg
+          class="bi flex-shrink-0 me-2"
+          width="24"
+          height="24"
+          role="img"
+          aria-label="Success:"
+        >
+          <use xlink:href="#check-circle-fill" />
+        </svg>
+        {% for message in messages %}
+        <strong>{{ message }}</strong>
+        {% endfor %}
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="alert"
+          aria-label="Close"
+        ></button>
+      </div> -->
+      <div
+        class="alert alert-success d-flex align-items-center"
+        role="alert"
+      >
+        <svg
+          class="bi flex-shrink-0 me-2"
+          width="24"
+          height="24"
+          role="img"
+          aria-label="Success:"
+        >
+          <use xlink:href="#check-circle-fill" />
+        </svg>
+        {{ message }}
+      </div>
+      {% endfor %}
+    </div>
+  </form>
+  {% endblock content %}

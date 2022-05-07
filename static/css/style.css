@@ -1,0 +1,1203 @@
+/**
+ * 1. Correct the line height in all browsers.
+ * 2. Prevent adjustments of font size after orientation changes in iOS.
+ */
+
+html {
+  font-family: sans-serif; /* 1 */
+  -ms-text-size-adjust: 100%; /* 2 */
+  -webkit-text-size-adjust: 100%; /* 2 */
+  /* background-color: fff; */
+}
+
+a:link {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Sections
+========================================================================== */
+
+/**
+ * Remove the margin in all browsers.
+ */
+
+body {
+  margin: 0;
+}
+
+body {
+  color: #012c5c;
+  background: #fff;
+  font: 16px/1.1875 "Open Sans", "Helvetica Neue", Helvetica, sans-serif;
+  min-width: 320px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/**
+ * Render the `main` element consistently in IE.
+ */
+
+main {
+  display: block;
+}
+
+/**
+ * Correct the font size and margin on `h1` elements within `section` and
+ * `article` contexts in Chrome, Firefox, and Safari.
+ */
+
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+
+/* Grouping content
+========================================================================== */
+
+/**
+ * 1. Add the correct box sizing in Firefox.
+ * 2. Show the overflow in Edge and IE.
+ */
+
+hr {
+  box-sizing: content-box; /* 1 */
+  height: 0; /* 1 */
+  overflow: visible; /* 2 */
+}
+
+/**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */
+
+pre {
+  font-family: monospace, monospace; /* 1 */
+  font-size: 1em; /* 2 */
+}
+
+/* Text-level semantics
+========================================================================== */
+
+/**
+ * Remove the gray background on active links in IE 10.
+ */
+
+a {
+  background-color: transparent;
+}
+
+/**
+ * 1. Remove the bottom border in Chrome 57-
+ * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
+ */
+
+abbr[title] {
+  border-bottom: none; /* 1 */
+  text-decoration: underline; /* 2 */
+  text-decoration: underline dotted; /* 2 */
+}
+
+/**
+ * Add the correct font weight in Chrome, Edge, and Safari.
+ */
+
+b,
+cite {
+  font-weight: bolder;
+}
+
+/**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */
+
+code,
+kbd,
+samp {
+  font-family: monospace, monospace; /* 1 */
+  font-size: 1em; /* 2 */
+}
+
+/**
+ * Add the correct font size in all browsers.
+ */
+
+small {
+  font-size: 80%;
+}
+
+/**
+ * Prevent `sub` and `sup` elements from affecting the line height in
+ * all browsers.
+ */
+
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+sup {
+  top: -0.5em;
+}
+
+/* Embedded content
+========================================================================== */
+
+/**
+ * Remove the border on images inside links in IE 10.
+ */
+
+img {
+  vertical-align: top;
+  border-style: none;
+}
+
+/* Forms
+========================================================================== */
+
+/**
+ * 1. Change the font styles in all browsers.
+ * 2. Remove the margin in Firefox and Safari.
+ */
+
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: inherit; /* 1 */
+  font-size: 100%; /* 1 */
+  line-height: 1.15; /* 1 */
+  margin: 0; /* 2 */
+}
+
+/**
+ * Show the overflow in IE.
+ * 1. Show the overflow in Edge.
+ */
+
+button,
+input {
+  /* 1 */
+  overflow: visible;
+}
+
+/**
+ * Remove the inheritance of text transform in Edge, Firefox, and IE.
+ * 1. Remove the inheritance of text transform in Firefox.
+ */
+
+button,
+select {
+  /* 1 */
+  text-transform: none;
+}
+
+/**
+ * Correct the inability to style clickable types in iOS and Safari.
+ */
+
+button,
+[type="button"],
+[type="reset"],
+[type="submit"] {
+  -webkit-appearance: button;
+}
+
+/**
+ * Remove the inner border and padding in Firefox.
+ */
+
+button::-moz-focus-inner,
+[type="button"]::-moz-focus-inner,
+[type="reset"]::-moz-focus-inner,
+[type="submit"]::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}
+
+/**
+ * Restore the focus styles unset by the previous rule.
+ */
+
+button:-moz-focusring,
+[type="button"]:-moz-focusring,
+[type="reset"]:-moz-focusring,
+[type="submit"]:-moz-focusring {
+  outline: 1px dotted ButtonText;
+}
+
+/**
+ * Correct the padding in Firefox.
+ */
+
+fieldset {
+  padding: 0.35em 0.75em 0.625em;
+}
+
+/**
+ * 1. Correct the text wrapping in Edge and IE.
+ * 2. Correct the color inheritance from `fieldset` elements in IE.
+ * 3. Remove the padding so developers are not caught out when they zero out
+ *    `fieldset` elements in all browsers.
+ */
+
+legend {
+  box-sizing: border-box; /* 1 */
+  color: inherit; /* 2 */
+  display: table; /* 1 */
+  max-width: 100%; /* 1 */
+  padding: 0; /* 3 */
+  white-space: normal; /* 1 */
+}
+
+/**
+ * Add the correct vertical alignment in Chrome, Firefox, and Opera.
+ */
+
+progress {
+  vertical-align: baseline;
+}
+
+/**
+ * Remove the default vertical scrollbar in IE 10+.
+ */
+
+textarea {
+  overflow: auto;
+}
+
+/**
+ * 1. Add the correct box sizing in IE 10.
+ * 2. Remove the padding in IE 10.
+ */
+
+[type="checkbox"],
+[type="radio"] {
+  box-sizing: border-box; /* 1 */
+  padding: 0; /* 2 */
+}
+
+/**
+ * Correct the cursor style of increment and decrement buttons in Chrome.
+ */
+
+[type="number"]::-webkit-inner-spin-button,
+[type="number"]::-webkit-outer-spin-button {
+  height: auto;
+}
+
+/**
+ * 1. Correct the odd appearance in Chrome and Safari.
+ * 2. Correct the outline style in Safari.
+ */
+
+[type="search"] {
+  -webkit-appearance: textfield; /* 1 */
+  outline-offset: -2px; /* 2 */
+}
+
+/**
+ * Remove the inner padding in Chrome and Safari on macOS.
+ */
+
+[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+/**
+ * 1. Correct the inability to style clickable types in iOS and Safari.
+ * 2. Change font properties to `inherit` in Safari.
+ */
+
+::-webkit-file-upload-button {
+  -webkit-appearance: button; /* 1 */
+  font: inherit; /* 2 */
+}
+
+/* Interactive
+========================================================================== */
+
+/*
+ * Add the correct display in Edge, IE 10+, and Firefox.
+ */
+
+details {
+  display: block;
+}
+
+/*
+ * Add the correct display in all browsers.
+ */
+
+summary {
+  display: list-item;
+}
+
+/* Misc
+========================================================================== */
+
+/**
+ * Add the correct display in IE 10+.
+ */
+
+template {
+  display: none;
+}
+
+/**
+ * Add the correct display in IE 10.
+ */
+
+[hidden] {
+  display: none;
+}
+
+/*google font link*/
+@import url("https://fonts.googleapis.com/css?family=Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&display=swap"); /*url link to adjust fonts*/
+html {
+  scroll-behavior: smooth;
+}
+
+/*container to addjust width, max-width and margin auto*/
+.container {
+  width: 95%;
+  max-width: 1170px;
+  margin: 0 auto;
+}
+/*all sector ends*/
+
+h3 {
+  font-size: 20px;
+  color: #333d79ff;
+}
+/*header CSS Starts*/
+
+.header,
+.footer {
+  position: relative;
+  background: #333d79ff;
+}
+
+/*hover effects that changes after hovering herader area */
+/* .header:hover,
+.footer:hover {
+  background: #504c4c;
+  transition: 0.5s;
+} */
+/*giving height and width in nav-bar class*/
+.nav-bar {
+  width: 100%;
+}
+/*logo */
+#logo {
+  width: 100px;
+  padding: 10px;
+  cursor: pointer;
+  float: left;
+}
+
+#logo a img {
+  max-width: 100%;
+  height: auto;
+  /* width: 100%;
+  border-radius: 10px; */
+}
+/*css navigation*/
+.navigation {
+  display: inline-block;
+  margin: 28px auto;
+  padding: 0;
+  vertical-align: middle;
+  overflow: hidden;
+  border-radius: 5px;
+  position: relative;
+}
+
+.navigation ul li {
+  list-style: none;
+  float: left;
+  margin: 0 -3px;
+}
+
+.navigation ul li a {
+  background: #fff;
+  color: #333d79ff;
+  height: 23px;
+  text-decoration: none;
+  position: relative;
+  padding: 10px 6px;
+  float: left;
+}
+
+/* using css before after to main css design*/
+.navigation li:before {
+  content: "";
+  float: left;
+  width: 0;
+  height: 0;
+  left: -20px;
+  border-top: 20px solid #fff;
+  border-bottom: 23px solid #fff;
+  border-left: 10px solid transparent;
+}
+
+.navigation li:after {
+  content: "";
+  float: left;
+  width: 0;
+  height: 0;
+  left: 100%;
+  border-color: transparent;
+  border-top: 20px solid transparent;
+  border-bottom: 20px solid transparent;
+  border-left: 10px solid #fff;
+}
+
+/*nth-child, first-child, last-child is the selectors that select element by addressing child*/
+.navigation li:nth-child(1):before {
+  border-left-color: transparent;
+}
+
+.navigation li:first-child a {
+  padding-left: 15px;
+}
+
+.navigation li:first-child:before {
+  border: none;
+}
+
+.navigation li:last-child a {
+  padding-right: 15px;
+}
+
+.navigation li:last-child:after {
+  border: none;
+}
+/*hover effects */
+.navigation li:hover a {
+  background: #333d79ff;
+  color: #fff;
+}
+
+.navigation li:hover:before {
+  border-color: #333d79ff;
+  border-left-color: transparent;
+}
+
+.navigation li:hover:after {
+  border-left-color: #333d79ff;
+}
+
+/* icon css*/
+.icon {
+  display: inline-block;
+  vertical-align: middle;
+  margin: 0 4px;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: contain;
+}
+
+.icon {
+  height: 25px;
+  width: 25px;
+}
+
+/* image icon input*/
+.icon-home {
+  background-image: url("../img/home.png");
+}
+
+.icon-news {
+  background-image: url("../img/news.png");
+}
+
+.icon-faq {
+  background-image: url("../img/faqs.png");
+}
+
+.icon-about {
+  background-image: url("../img/about.png");
+}
+
+.icon-login {
+  background-image: url("../img/user.png");
+}
+
+.icon-signup{
+  background-image: url("../img/useradd.png");
+}
+
+.icon-logout {
+  background-image: url("../img/logout.png");
+}
+/* header css ends*/
+
+/* section css starts*/
+.main {
+  margin: 20px auto;
+}
+
+.main::after {
+  content: "";
+  clear: both; /* to clear float*/
+  display: table;
+}
+/*giving section tag (Tax calculator system) 95% width*/
+.section {
+  width: 100%;
+  float: center;
+}
+
+.container h1 {
+  text-align: center;
+  color: #333d79ff;
+}
+
+.section-top {
+  height: auto;
+}
+
+/*calculator starts*/
+.tax-calculator {
+  background: fff;
+  margin-right: 5px;
+  padding: 10px 20px;
+  border: 1px solid rgb(131, 121, 121);
+  box-shadow: inset 0 1px 0 0 #686666, 0 1px 3px #000;
+  position: relative;
+  overflow: hidden;
+}
+
+/* inside tax-calculator all selector*/
+/* label i.e. salary, marriage status*/
+.tax-calculator label {
+  display: inline-block;
+  color: #000;
+  width: 200px;
+  height: 30px;
+}
+/* select i.e married/unmarried*/
+.tax-calculator select {
+  font-family: "Calistoga", cursive;
+  width: 110px;
+  padding: 3px;
+}
+/* input to input numbers*/
+.tax-calculator input {
+  width: 200px;
+  height: 30px;
+  outline: none;
+  padding: 3px;
+  border: 1px solid #000;
+}
+/*gives focus when user click on input*/
+.tax-calculator input:focus {
+  border-color: rgb(63, 60, 60);
+  box-shadow: inset 0 1px 0 0 #686666, 0 1px 3px #000;
+  transition: 0.5s;
+}
+/*element selectors */
+.deduction {
+  margin-bottom: 20px;
+}
+/*selects selected element and change css*/
+.info-top,
+.info-bottom,
+.income-top,
+.income-bottom,
+.deduction-top,
+.deduction-middle,
+.deduction-bottom {
+  display: flex;
+}
+
+.income-salary,
+.income-bonus,
+.deduction-fund,
+.deduction-trust,
+.dedcution-insurance {
+  margin: auto;
+}
+/*inside taxicalculator all selectoin end*/
+
+/*basic information */
+.basic-info {
+  padding: 10px;
+}
+
+.marriage-info,
+.fiscal-info,
+.gender-info,
+.residental-info {
+  padding: 3px;
+  margin: auto;
+}
+/*basic information*/
+/* for income*/
+.income-info {
+  padding: 10px;
+  text-align: center;
+}
+
+.income-salary,
+.income-allowance,
+.income-bonus,
+.income-others {
+  padding: 5px;
+}
+/*income*/
+/*for deduction information*/
+.deduction-info {
+  padding: 10px;
+  text-align: center;
+}
+
+.deduction-fund,
+.deduction-donation,
+.deduction-trust,
+.deduction-medical,
+.dedcution-insurance,
+.deduction-others {
+  padding: 5px;
+}
+
+/*deduction information*/
+
+/*button starts*/
+
+.calculation-button {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+/* button reset to clear input's numbers*/
+#btn-reset {
+  height: 40px;
+  color: 000;
+  border-radius: 10px;
+  background: #fff;
+  transition: 0.5s;
+  cursor: pointer;
+}
+
+#btn-reset:hover {
+  color: #fff;
+  background: #333d79ff;
+}
+/*button calculate to calculate all inputs*/
+#btn-calculate {
+  height: 40px;
+  border-radius: 10px;
+  color: #000;
+  background: #fff;
+  transition: 0.5s;
+  cursor: pointer;
+}
+
+#btn-calculate:hover {
+  color: #fff;
+  background: #333d79ff;
+}
+/*button ends*/
+
+/*pop-out result*/
+
+/*calculator ends*/
+
+/*side news*/
+/*displays news aside*/
+.side-news {
+  width: 33%;
+  margin-left: 2%;
+  float: left;
+  overflow: hidden;
+  text-align: center;
+}
+
+.side-news .news {
+  border: 1px solid rgb(131, 121, 121);
+  box-shadow: inset 0 1px 0 0 #686666, 0 1px 3px #000;
+}
+
+.news h3 {
+  margin-top: -5px;
+  margin-bottom: -10px;
+}
+
+/*click button main class */
+.click {
+  visibility: hidden;
+  opacity: 1;
+  height: 60px;
+  padding: 15px;
+  border-radius: 5px;
+  position: absolute;
+  top: 60px;
+  left: 120px;
+  right: 0;
+  bottom: 60px;
+  transition: 0.5s;
+}
+
+.click a {
+  text-decoration: none;
+  font-family: "Calistoga", cursive;
+}
+/*click button main class */
+
+.newss {
+  color: #000;
+  padding: 5px;
+  height: 183px;
+  line-height: 1.5;
+  overflow: hidden;
+  border: 1px solid rgb(131, 121, 121);
+  text-overflow: ellipsis;
+  position: relative;
+}
+
+/* click me home page hiver button */
+.newss:hover {
+  opacity: 0.8;
+}
+
+.news-1:hover .click-me1 {
+  visibility: visible;
+  background-color: #000;
+  opacity: 1;
+}
+
+.news-1:hover .click-me1 a {
+  color: #fff;
+}
+
+.news-2:hover .click-me2 {
+  visibility: visible;
+  background-color: #000;
+}
+
+.news-2:hover .click-me2 a {
+  color: #fff;
+}
+
+.news-3:hover .click-me3 {
+  visibility: visible;
+  background-color: #000;
+}
+
+.news-3:hover .click-me3 a {
+  color: #fff;
+}
+
+.news-4:hover .click-me4 {
+  visibility: visible;
+  background-color: #000;
+}
+
+.news-4:hover .click-me4 a {
+  color: #fff;
+}
+/*side news ends*/
+
+/*result css */
+.result {
+  clear: both;
+}
+
+.results-info {
+  border: 1px solid rgb(131, 121, 121);
+  box-shadow: inset 0 1px 0 0 #686666, 0 1px 3px #000;
+  margin: 20px 0;
+  padding: 20px 10px;
+}
+
+.results-info label {
+  width: 200px;
+  padding: 10px;
+  color: #000;
+}
+
+.result:after {
+  content: "";
+  clear: both;
+  display: table;
+}
+/*section css ends*/
+
+.container-news {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  max-width: 1170px;
+  margin: 0 auto;
+}
+
+.container-news > * {
+  flex-grow: 1;
+  flex-basis: 1 1 40%;
+}
+
+/*footer css starts*/
+.footer .container {
+  text-align: center;
+  padding: 20px 0;
+}
+
+.footer-nav {
+  padding: 0 5px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.footer-news,
+.footer-faqs,
+.footer-aboutus {
+  width: 32%;
+  text-align: center;
+}
+
+.footer-nav a,
+.footer-nav p,
+.copyrights {
+  color: #fff;
+}
+
+.copyrights {
+  font-size: 12px;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+/*foooter css ends
+
+/*css for news */
+.section-news {
+}
+
+.section-news h1 {
+  text-align: center;
+  color: #333d79ff;
+}
+
+.articles {
+  padding: 5px;
+  margin: 10px 5px;
+  display: flex;
+  height: 110px;
+  overflow: hidden;
+  color: #000;
+  transition: 0.6s;
+  border-radius: 5px;
+  border: 1px solid black;
+}
+
+.articles:hover {
+  height: 200px;
+}
+
+.show-more {
+  padding: 5px;
+  border-radius: 5px;
+  cursor: pointer;
+  color: #333d79ff;
+}
+
+.desc-visible {
+  /*  visibility: hidden;
+  transform: translateY(20px);
+  transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s ease;*/
+}
+
+.side-image {
+  width: 200px;
+}
+
+.side-image img {
+  width: 100px;
+}
+
+.heading:hover .desc-visible {
+  /*  visibility: visible;
+  transform: translateY(0);
+  opacity: 1;*/
+}
+
+.recent-side-news {
+  width: 35%;
+  height: 500px;
+  padding-left: 0.5rem;
+  margin-left: 0.5rem;
+  float: right;
+  box-shadow: inset 5px 0 5px -5px #29627e;
+  font-style: italic;
+}
+
+.latest {
+  margin: 10px 5px;
+}
+
+/*inside news css*/
+
+.section-inside-news {
+  margin-top: 20px;
+}
+
+.descp {
+  width: 77%;
+  margin: 0 auto;
+}
+
+.inside-article h3 {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.news-image {
+  margin: 0 auto;
+  width: 400px;
+  position: relative;
+}
+
+.news-image img {
+  width: 500px;
+  height: 300px;
+}
+
+.paragraph p {
+  color: #000;
+  font-weight: normal; /*this*/
+}
+
+/*faqs css*/
+.section-faqs {
+  margin: 100px 20px;
+}
+
+.accordion {
+  background-color: #eee;
+  color: #444;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+  transition: 0.4s;
+}
+
+.active,
+.accordion:hover {
+  background-color: #ccc;
+}
+
+.accordion:after {
+  content: "\002B";
+  color: #777;
+  font-weight: bold;
+  float: right;
+  margin-left: 5px;
+}
+
+.accordion.active:after {
+  content: "\2212";
+}
+.accr {
+  margin-bottom: 30px;
+}
+
+.panel {
+  padding-left: 10 px;
+  background-color: white;
+  max-height: 0;
+  overflow: hidden;
+  transition: 0.2s ease-out;
+}
+/*about us css starts*/
+.section-about {
+  text-align: center;
+  margin: 150px 0;
+  color: #333d79ff;
+  margin: 80px 0 150;
+}
+
+.about-us {
+  width: 77%;
+  margin: 0 auto;
+}
+
+.about-us h1 {
+  margin-bottom: 20px;
+}
+
+.about-calculator p,
+.about-service p {
+  color: #000;
+}
+/*about us css end */
+
+.total-tax,
+.total-deduction,
+.total-income {
+  color: #000;
+}
+
+
+.about-service {
+}
+.section-profile {
+  text-align: center;
+  margin: 150px 0;
+  color: #333d79ff;
+  margin: 80px 0 150;
+}
+
+
+/*about us css end */
+.particular label {
+  font-weight: bold;
+}
+.particular,
+.total-tax,
+.total-deduction,
+.total-income {
+  display: flex;
+  justify-content: space-between;
+}
+.results-info output {
+  width: 200px;
+  padding: 10px;
+}
+/*responsive css */
+/*responsive for mobile */
+@media only screen and (max-width: 479px) {
+  #logo {
+    float: none;
+  }
+  .navigation li:first-child:before {
+  }
+
+  .navigation {
+    margin: 0;
+  }
+  .icon {
+    height: 50px;
+    width: 50px;
+    visibility: visible;
+  }
+
+  .icon-home {
+    padding-top: 85px;
+    height: 50px;
+  }
+
+  .navigation ul {
+    margin-top: -25px;
+    margin-left: -15px;
+  }
+
+  .navigation ul li {
+    width: 60px;
+    margin: 0 3px;
+  }
+
+  .navigation ul li a {
+    height: 40px;
+    visibility: hidden;
+  }
+
+  .navigation li:before,
+  .navigation li:after {
+    visibility: hidden;
+  }
+  .navigation li:first-child:before {
+    border: 0;
+  }
+
+  .footer-news,
+  .footer-faqs,
+  .footer-aboutus {
+    width: 32%;
+    text-align: left;
+  }
+  /*this*/
+  .articles {
+    height: 157px;
+  }
+
+  .articles h3 {
+    height: 26px;
+    overflow: hidden;
+  }
+  .articles p {
+    height: 95px;
+    overflow: hidden;
+  }
+  /*this*/
+}
+
+/*responsive for tablet*/
+@media screen and (max-width: 768px) {
+  #btn-reset,
+  #btn-calculate {
+    margin-bottom: 10px;
+  }
+  /*this*/
+  .articles:hover {
+    height: 220px;
+  }
+}
+
+/*responsive for tablet*/
+@media screen and (max-width: 991px) {
+  .section {
+    float: none;
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  .info-top,
+  .info-bottom,
+  .income-top,
+  .income-bottom,
+  .deduction-top,
+  .deduction-middle,
+  .deduction-bottom {
+    display: block;
+  }
+
+  .tax-calculator input {
+    width: 210px;
+  }
+
+  .side-news {
+    clear: both;
+    float: none;
+  }
+
+  .side-news {
+    width: 90%;
+    margin: 0 auto;
+  }
+}
+/*responsive for computer */
+@media screen and (max-width: 1199px) {
+}
+
+@media screen and (max-width: 1366px) {
+}

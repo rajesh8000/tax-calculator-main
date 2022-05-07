@@ -1,0 +1,53 @@
+{% extends 'base.html' %} {% load static %} {% block content %}
+
+<!-- {% if not user.is_authenticated %}
+    
+    <h1 align="center">Error Code 404 Page not Found</h1>
+    
+{%endif%} -->
+
+<!-- {% if user.is_authenticated %}
+
+    
+{%endif%} -->
+
+<h2 align="center">Showing Income Tax Calculation History of {{user}}</h2>
+<table border="1" align="center" cellpadding="5">
+    <td>S.N</td>
+    <td>Income Amount</td>
+    <td>Deductions</td>
+    <td>Tax Amount</td>
+    <td>Date of Calculation</td>
+
+    <tr>
+        <td>1</td>
+        <td>Rs 350000</td>
+        <td>Rs 1000</td>
+        <td>Rs 3500</td>
+        <td>2022/01/12</td>
+    </tr>
+
+    <tr>
+        <td>2</td>
+        <td>Rs 350000</td>
+        <td>Rs 1000</td>
+        <td>Rs 3500</td>
+        <td>2022/01/12</td>
+    </tr>
+
+    <tr>
+        <td>3</td>
+        <td>Rs 350000</td>
+        <td>Rs 1000</td>
+        <td>Rs 3500</td>
+        <td>2022/01/12</td>
+    </tr>
+
+</table>
+
+<div>
+<br>
+</div>
+
+
+{%endblock content%}

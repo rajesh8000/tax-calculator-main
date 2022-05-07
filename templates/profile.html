@@ -1,0 +1,26 @@
+{% extends 'base.html' %} {% load static %} {% block content %}
+<body>
+    <div id="wrapper">  
+        <main>
+        <section class="section-profile">
+            <div class="container">
+                <div class="about-calculator">
+{%if user.is_authenticated%}
+
+            <h1>Profile</h1>
+            <p>Username: {{user}}</p>
+            <p>First Name: {{user.first_name}}</p>
+            <p>Last Name: {{user.last_name}}</p>
+            <p>Email: {{user.email}}</p>
+
+     {% else %}
+     <p> Login to view your Details</p>
+    
+     {%endif%}
+                </div>
+            </div>
+        </section>
+        </main>
+    </div>
+</body>
+{%endblock content%}

@@ -1,0 +1,140 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+<body>
+
+    {% if user.is_authenticated %}
+
+    <!--section starts-->
+    <!--class main parents of all elements-->
+    <div class="main">
+        <!---class container to use width, max-width and margin auto-->
+        <div class="container">
+            <!--section tag starts -->
+            <section class="section">
+                <h1>Tax Calculator System</h1>
+                <!--class section-top contains with tax calculator system-->
+                <div class="section-top">
+                    <div class="tax-calculator" id="calculation">
+                        <h3>Annual Income</h3>
+                        <form class="income" method='POST'>
+                            {% csrf_token %}
+                            <!--class income-info contains with income informations-->
+                            <div class="income">
+                                <div class="income-info">
+                                    <div class="income-top">
+                                        <div class="income-salary">
+                                            <label for="salary">Salary:</label>
+                                            <input type="number" name="salary" min="1000" placeholder="10000" required>
+                                        </div>
+                                        <div class="income-allowance">
+                                            <label for="allowance">Allowance:</label>
+                                            <input type="number" name="allowance" required>
+                                        </div>
+                                    </div>
+                                    <div class="income-bottom">
+                                        <div class="income-bonus">
+                                            <label for="bonus">Bonus:</label>
+                                            <input type="number" name="Bonus" required>
+                                        </div>
+                                        <div class="income-others">
+                                            <label for="others">Others:</label>
+                                            <input type="number" name="others" required>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <h3>Deduction</h3>
+                            <!---class deduction-info contains with deduction information-->
+                            <div class="deduction">
+                            <div class="deduction-info">
+                                <div class="deduction-top">
+                                    <div class="deduction-fund">
+                                        <label for="fund">Provident Fund:</label>
+                                        <input type="number" placeholder="10000" name="Fund" required>
+                                    </div>
+                                    <div class="deduction-donation">
+                                        <label for="donation">Donation:</label>
+                                        <input type="number" name="donation" required>
+                                    </div>
+                                </div>
+                                <div class="deduction-middle">
+                                    <div class="deduction-trust">
+                                        <label for="trust">Citizen Investment Trust:</label>
+                                        <input type="number" name="trust" required>
+                                    </div>
+                                    <div class="deduction-medical">
+                                        <label for="medical">Medical Expencess:</label>
+                                        <input type="number" name="medical" required>
+                                    </div>
+                                </div>
+                                <div class="deduction-bottom">
+                                    <div class="dedcution-insurance">
+                                        <label for="insurance">Insurance:</label>
+                                        <input type="number" name="insurance" required>
+                                    </div>
+                                    <div class="deduction-others">
+                                        <label for="others">Others:</label>
+                                        <input type="number" name="other" required>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--class button i.e calculator buttons-->
+                            <div class="calculation-button">
+                                <input type="submit" id="btn-reset" Value="Reset Value" name="reset">
+                                <input type="submit" id="btn-calculate" value="Calculate" name="calculate">
+                            </div>
+                            
+                        </form>
+                        </div>
+                    </div>
+            </section>
+            <!---section tag ends-->
+            <!--result section-->
+            <section>
+                <div class="result">
+                    <h1>Result</h1>
+                    <div class="results-info">
+                        <div class="particular"><!---this-->
+                            <label>Particulars</label>
+                            <label>Amount(Rs.)</label>
+                        </div>
+                        <div class="total-income">
+                            <label>Total annual income:</label>
+                            <label>{{income_amount}}</label><!---this-->
+                            <!--Printing total income-->
+
+                        </div>
+
+                        <div class="total-deduction">
+                            <label>Total Deduction:</label>
+                            <label>{{deduction_amount}}</label>
+                            <!--Printing total deduction amount-->
+
+                        </div>
+                        <div class="total-tax">
+                            <label>Total Tax:</label>
+                            <label>{{tax_amount}}</label>
+                            <!--Printing total tax amount-->
+
+                        </div>
+
+                    </div>
+
+                </div>
+            </section>
+        </div>
+    </div>
+    <!---inner line js-->
+
+    {%endif%}
+
+    {% if not user.is_authenticated %}
+    
+    <h1 align="center">User Not Logged in Please Login</h1>
+    
+    {%endif%}
+</body>
+{% endblock content %}

@@ -1,0 +1,118 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+{% block content %}
+
+<body>
+
+   
+    
+
+    {% if user.is_authenticated %}
+
+    <!--section starts-->
+    <!--class main parents of all elements-->
+    <div class="main">
+        <!---class container to use width, max-width and margin auto-->
+        <div class="container">
+            <!--section tag starts -->
+            <section class="section">
+                <h1>Value Added Tax</h1>
+                <!--class section-top contains with tax calculator system-->
+                <div class="section-top">
+                    <div class="tax-calculator" id="calculation">
+                        <h3>VAT Calculator:</h3>
+                        <form class="income" method='POST'>
+                            {% csrf_token %}
+                            <!--class income-info contains with income informations-->
+                            <div class="income">
+                                <div class="income-info">
+                                    <div class="income-top">
+                                        <div class="income-salary">
+                                            <label for="salary">Amount:</label>
+                                            <input type="number" name="salary" min="1000" placeholder="10000" required>
+                                        </div>
+                                      
+                                    </div>
+                                   
+                            
+                               
+                            <!--class button i.e calculator buttons-->
+                            <div class="calculation-button">
+                                <input type="submit" id="btn-reset" Value="Reset Value" name="reset">
+                              
+                               
+
+                                <Input type="submit" id="btn-calculate" value="Calculate" name="calculate">
+
+
+                            </div>
+                            
+                            </form>
+                            </div>
+                        </div>
+                </section>
+                <!---section tag ends-->
+                <!--result section-->
+                <section>
+                    <div class="result">
+                        <h1>Result</h1>
+                        <div class="results-info">
+                            <div class="particular"><!---this-->
+                                <label>Particulars</label>
+                                <label>Amount(Rs.)</label>
+                            </div>
+                           
+                            <div class="total-tax">
+                                <label>Total Tax:</label>
+                                <label>{{total_tax}}</label>
+                                <!--Printing total tax amount-->
+    
+                          
+                            </div>
+    
+                            
+    
+                    </div>
+                </section>
+            </div>
+        </div>
+        <!---inner line js-->
+        
+    
+        {%endif%}
+    
+        {% if not user.is_authenticated %}
+        
+        <h1 align="center">User Not Logged in Please Login</h1>
+        
+        {%endif%}
+    
+      
+    </body>
+    {% endblock content %}
+                                    
+                                
+                                
+                                
+
+                                
+                                
+                           
+                           
+
+                           
+                           
+                      
+                           
+
+                           
+                            
+                            
+
+
+                              
+                              
+                             
+                          

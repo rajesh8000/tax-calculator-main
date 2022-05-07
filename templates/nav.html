@@ -1,0 +1,50 @@
+{% load static %}
+<header class="header">
+    <div class="container">
+        <!--Page Navigation Start-->
+        <nav class="nav-bar">
+            <!--nav tag represent the section of navigation links-->
+            <!--Logo -->
+            <div id="logo">
+                <a href="#"><img src="{% static 'img/logo.png' %}" height="100px" width="320px" alt="..." /></a>
+            </div>
+            <!--Logo -->
+            <!---navigation list-->
+            <div class="navigation">
+                <ul>
+
+                    <!--class active to show which page we are at-->
+                    <!--Class icon is the main class and icon-home is sub main class-->
+                    {% if user.is_authenticated %}
+
+                    <li><a class="active" href="{% url 'index' %}"><span class="icon icon-home"></span>Tax Calculator</a></li>
+                    <li><a class="active" href="{% url 'Vat' %}"><span class="icon icon-home"></span>VAT Calculator</a></li>
+
+                    {%endif%}
+                    
+                    <li><a href="{% url 'news' %}"><span class="icon icon-news"></span>News</a></li>
+                    <li><a href="{% url 'faqs' %}"><span class="icon icon-faq"></span>FAQ</a></li>
+                    <li><a href="{% url 'aboutus' %}"><span class="icon icon-about"></span>About Us</a></li>
+                    
+                    {% if not user.is_authenticated %}
+
+                    <li><a href="{% url 'signin' %}"><span class="icon icon-login"></span>Sign In</a></li>
+                    <li><a href="{% url 'signup' %}"><span class="icon icon-signup"></span>Sign Up</a></li>
+
+                    {%endif%}
+                    
+                    {% if user.is_authenticated %}
+
+                    <li><a href="{% url 'logout' %}"><span class="icon icon-login"></span>Log Out</a></li>
+                    <li><a href="{% url 'profile' %}"><span class="icon icon-login"></span>Profile: Hi, {{user.first_name}}</a></li>
+                    
+                    {%endif%}
+
+                </ul>
+            </div>
+            <!---navigation list-->
+        </nav>
+    </div>
+    <!--Page Navigation ends-->
+    
+</header>

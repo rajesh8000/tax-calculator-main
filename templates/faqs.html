@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+<body>
+  <div id="wrapper">
+    <main>
+      <!---section main page-->
+      <section class="section-faqs">
+        <div class="faqs container">
+          <article>
+            {% comment %} <button class="accordion">How can i get my result?</button>
+            <ul class="panel list-panel">
+              <li>Go to Home page.</li>
+              <li>Fill the information asked in our home page like: Married status, gender, salary.</li>
+              <li>If you have addition information fill it up</li>
+              <li>Then click on calculate button to calculate tax</li>
+            </ul> {% endcomment %}
+
+            {% for faq in faqs %}
+            <!--for loop starts -->
+
+            <button class="accordion accr">{{ faq.question }}</button>
+            <div class="panel">
+              <p>{{ faq.answer }}</p>
+            </div>
+            {% endfor %}
+            <!--for loop ends -->
+
+        </div>
+      </section>
+    </main>
+  </div>
+  <!--js links -->
+  <script src="{% static 'js/main.js' %}"></script>
+</body>
+{% endblock content %}

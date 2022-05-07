@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+<body>
+  <div id="wrapper">
+    <!--Header start-->
+    <header class="header">
+      <div class="container">
+      </div>
+      <!--Page Navigation ends-->
+    </header>
+    <main>
+      <section class="section-inside-news container">
+        <div class="descp">
+          <artcle class="new-articles">
+            <div class="inside-article">
+              <h3>{{ post.title }}<h3>
+                  <figure class="news-image">
+                  </figure>
+                  <div class="paragraph">
+                    <p>{{ post.content }}</p>
+                  </div>
+            </div>
+          </artcle>
+        </div>
+      </section>
+    </main> 
+  </div>
+</body>
+{% endblock content %}
